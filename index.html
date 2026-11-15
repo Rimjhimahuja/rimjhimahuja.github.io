@@ -1,15 +1,232 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Resume</title>
+
+  <title>Alex Morgan | Frontend Developer</title>
+
+  <meta name="description" content="Alex Morgan's personal portfolio website.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <h1>Your Name</h1>
-  <p>Resume coming soon...</p>
+  <!-- Navigation -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="#home" class="logo">❧ Alex Morgan</a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-button">Contact Me</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+        <p class="tag">Frontend Developer</p>
+
+        <h1>
+          Hi, I'm <span>Alex Morgan</span>
+        </h1>
+
+        <h2>Creating simple and meaningful digital experiences.</h2>
+
+        <p class="hero-description">
+          I'm a computer science student who enjoys designing
+          and building websites that are simple, useful and
+          enjoyable to explore.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="primary-button">
+            View My Work
+          </a>
+
+          <a href="#contact" class="secondary-button">
+            Contact Me
+          </a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/" target="_blank"
+             rel="noopener noreferrer">GitHub</a>
+
+          <a href="https://www.linkedin.com/" target="_blank"
+             rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="image-background">
+          <img src="profile.jpg"
+               alt="Portrait of Alex Morgan">
+        </div>
+      </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+
+      <p class="section-tag">A little about me</p>
+      <h2>About Me</h2>
+
+      <p class="section-intro">
+        I'm learning, experimenting and growing as a frontend
+        developer, one project at a time.
+      </p>
+
+      <div class="about-cards">
+
+        <article class="info-card">
+          <span class="card-icon">✿</span>
+          <h3>My Journey</h3>
+          <p>
+            I'm studying computer science and exploring
+            the world of web development.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-icon">⌘</span>
+          <h3>My Interests</h3>
+          <p>
+            I enjoy working with layouts, colours,
+            responsive designs and frontend technologies.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <span class="card-icon">♡</span>
+          <h3>My Goal</h3>
+          <p>
+            My goal is to create accessible, useful
+            and enjoyable digital experiences.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+
+      <p class="section-tag">What I work with</p>
+      <h2>My Skills</h2>
+
+      <div class="skill-list">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+        <span>Git & GitHub</span>
+        <span>UI Design</span>
+      </div>
+
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+
+      <p class="section-tag">Things I've been creating</p>
+      <h2>My Projects</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-visual">01</div>
+          <h3>Personal Portfolio</h3>
+          <p>
+            A responsive personal website showcasing my
+            skills, interests and work.
+          </p>
+          <span>HTML · CSS</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-visual">02</div>
+          <h3>Weather Dashboard</h3>
+          <p>
+            A weather interface concept designed to display
+            useful weather information clearly.
+          </p>
+          <span>HTML · CSS · JavaScript</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-visual">03</div>
+          <h3>Task Manager</h3>
+          <p>
+            A simple task management concept for organising
+            everyday activities.
+          </p>
+          <span>HTML · CSS · JavaScript</span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="section certificates" id="certificates">
+
+      <p class="section-tag">Learning and growing</p>
+      <h2>Certificates</h2>
+
+      <div class="certificate-card">
+        <span class="card-icon">✧</span>
+        <h3>My Learning Journey</h3>
+        <p>
+          This section will showcase certificates and
+          courses as I complete them.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+
+      <p class="section-tag">Let's connect</p>
+      <h2>Get In Touch</h2>
+
+      <p>
+        Have an idea, opportunity or just want to say hello?
+        I'd be happy to connect.
+      </p>
+
+      <a href="mailto:your-email@example.com"
+         class="primary-button">
+        Send Me an Email
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Alex Morgan. Made with care.</p>
+  </footer>
 
 </body>
 </html>
