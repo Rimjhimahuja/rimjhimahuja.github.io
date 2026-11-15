@@ -597,3 +597,11 @@ section {
   width: 100%;
   margin: auto;
 }
+.hero::before,
+.hero::after,
+.hero-image::before,
+.hero-image::after,
+.section-tag::before {
+  content: none !important;
+  display: none !important;
+}
