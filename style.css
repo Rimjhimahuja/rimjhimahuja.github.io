@@ -487,11 +487,6 @@ section {
     justify-content: center;
   }
 
-  .image-background {
-    width: 245px;
-    height: 300px;
-  }
-
   .section {
     padding: 65px 7%;
   }
@@ -522,11 +517,6 @@ section {
 @media (max-width: 380px) {
   .hero h1 {
     font-size: 36px;
-  }
-
-  .image-background {
-    width: 215px;
-    height: 270px;
   }
 
   .primary-button,
@@ -566,33 +556,6 @@ section {
   pointer-events: none;
 }
 
-.hero-image {
-  position: relative;
-  isolation: isolate;
-}
-
-.hero-image::before {
-  content: "";
-  position: absolute;
-  width: 340px;
-  height: 340px;
-  background: var(--powder-blue);
-  border-radius: 48% 52% 65% 35%;
-  transform: rotate(-20deg);
-  z-index: -1;
-}
-
-.hero-image::after {
-  content: "✿";
-  position: absolute;
-  right: 5%;
-  top: 2%;
-  font-size: 55px;
-  color: var(--olive);
-  opacity: 0.6;
-  pointer-events: none;
-}
-
 .info-card {
   border-top: 4px solid var(--sage);
 }
@@ -624,4 +587,13 @@ section {
   .hero-image::after {
     font-size: 38px;
   }
+}
+.hero {
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 750px;
+  width: 100%;
+  margin: auto;
 }
