@@ -1,581 +1,368 @@
-/* ==============================
-   1. COLOURS AND GLOBAL SETTINGS
-============================== */
+
+/* 1. BASIC PAGE STYLING */
 
 :root {
-  --ivory: #EBEBD8;
-  --sage: #9BA685;
-  --deep-green: #455230;
-  --olive: #637545;
-  --powder-blue: #DCEAF2;
-  --dusty-blue: #A9C3D3;
-  --white: #F8F8F0;
-  --text: #343D2C;
+    --background: #F3F0E5;
+    --white: #FFFFFF;
+    --primary: #526342;
+    --secondary: #DCE4D3;
+    --accent: #B8C9CE;
+    --text: #333B30;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--ivory);
-  color: var(--text);
-  line-height: 1.7;
-}
-
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--deep-green);
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: var(--primary);
 }
 
-section {
-  scroll-margin-top: 90px;
+h1, h2, h3 {
+    color: var(--primary);
 }
 
-/* ==============================
-   2. NAVIGATION BAR
-============================== */
 
-.header {
-  width: 100%;
-  padding: 20px 7%;
-  background: var(--ivory);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid rgba(69, 82, 48, 0.12);
-}
+/* 2. NAVIGATION BAR */
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background-color: var(--background);
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 23px;
-  font-weight: 700;
-  color: var(--deep-green);
-  white-space: nowrap;
+.navbar h2 {
+    font-size: 24px;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  list-style: none;
+.navbar a {
+    padding: 8px;
+    font-size: 14px;
 }
 
-.nav-links a {
-  font-size: 13px;
-  font-weight: 600;
-  transition: color 0.3s ease;
+.navbar a:hover {
+    color: #82956B;
 }
 
-.nav-links a:hover {
-  color: var(--olive);
-}
 
-.nav-button {
-  background: var(--deep-green);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-size: 13px;
-  transition: 0.3s;
-}
+/* 3. HOME SECTION */
 
-.nav-button:hover {
-  background: var(--olive);
+#home {
+    min-height: 75vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    background-color: var(--secondary);
+    gap: 40px;
+    flex-wrap: wrap;
 }
-
-/* ==============================
-   3. HERO SECTION
-============================== */
 
 .hero {
-  min-height: 600px;
-  padding: 75px 10%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 55px;
-}
-
-.hero-content {
-  flex: 1;
-  max-width: 560px;
-}
-
-.tag, .section-tag {
-  color: var(--olive);
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
+    position: relative;
 }
 
 .hero h1 {
-  font-size: clamp(42px, 5vw, 65px);
-  line-height: 1.15;
-  margin-bottom: 15px;
-}
-
-.hero h1 span {
-  color: var(deep green);
+    font-size: 58px;
+    margin: 10px 0;
 }
 
 .hero h2 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 19px;
-  font-weight: 500;
-  margin-bottom: 18px;
+    font-size: 25px;
+    font-weight: normal;
 }
 
-.hero-description {
-  font-size: 15px;
-  max-width: 470px;
-  margin-bottom: 18px;
-  color: #59614F;
+.hero p {
+    max-width: 500px;
+    margin: 15px 0;
 }
 
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.hero a {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin-top: 15px;
 }
 
-.secondary-button,
-.secondary-button {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: 0.3s ease;
+.hero a:hover {
+    background-color: #394A30;
 }
 
-. secondary-button {
-  background: var(--deep-green);
-  color: white;
+
+/* 4. COMMON SECTION STYLING */
+
+section:not(#home) {
+    padding: 70px 10%;
 }
 
-.secondary-button:hover {
-  background: var(--olive);
-  transform: translateY(-3px);
+section:not(#home) > h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
 }
 
-.secondary-button {
-  border: 1.5px solid var(--deep-green);
-  color: var(--deep-green);
+
+/* 5. ABOUT SECTION */
+
+#about {
+    background-color: var(--background);
 }
 
-.secondary-button:hover {
-  background: var(--sage);
-  transform: translateY(-3px);
+#about p {
+    max-width: 700px;
+    margin-bottom: 18px;
 }
 
-.social-links {
-  display: flex;
-   align-items:centre;
-  gap: 18px;
-  margin-top: 0px;
+.highlight-card {
+    display: inline-block;
+    background-color: var(--white);
+    padding: 22px;
+    margin: 12px;
+    border-radius: 12px;
+    width: 28%;
+    vertical-align: top;
 }
 
-.social-links a {
-  font-size: 14px;
-  color: var(--olive);
-  font-weight: 600;
+
+/* 6. EDUCATION SECTION */
+
+#education {
+    background-color: var(--secondary);
 }
 
-.social-links a:hover {
-  color: var(--deep-green);
+.education-card {
+    background-color: var(--white);
+    padding: 22px;
+    margin-bottom: 18px;
+    border-radius: 12px;
 }
 
-/* ==============================
-   5. GENERAL SECTION SETTINGS
-============================== */
 
-.section {
-  padding: 85px 10%;
-  text-align: center;
+/* 7. SKILLS SECTION */
+
+#skills {
+    background-color: var(--background);
 }
 
-.section h2 {
-  font-size: 40px;
-  margin-bottom: 18px;
+.skill-card {
+    display: inline-block;
+    background-color: var(--white);
+    padding: 25px;
+    margin: 10px;
+    border-radius: 12px;
+    width: 28%;
+    vertical-align: top;
 }
 
-.section-intro {
-  max-width: 600px;
-  margin: 0 auto 40px;
-  color: #59614F;
+
+/* 8. STRENGTHS SECTION */
+
+#strengths {
+    background-color: var(--secondary);
 }
 
-/* ==============================
-   6. ABOUT SECTION
-============================== */
-
-.about {
-  background: #F3F2E5;
+.strength-card {
+    display: inline-block;
+    background-color: var(--white);
+    padding: 25px;
+    margin: 10px;
+    border-radius: 12px;
+    width: 28%;
+    vertical-align: top;
 }
 
-.about-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 40px;
+
+/* 9. CONTACT SECTION */
+
+#contact {
+    background-color: var(--background);
 }
 
-.info-card,
-.project-card,
-.certificate-card {
-  background: var(--white);
-  padding: 30px 24px;
-  border-radius: 18px;
-  box-shadow: 0 8px 25px rgba(69,82,48,0.06);
-  transition: transform 0.3s ease,
-              box-shadow 0.3s ease;
+#contact p {
+    margin: 12px 0;
 }
 
-.info-card:hover,
-.project-card:hover,
-.certificate-card:hover {
-  transform: translateY(-7px);
-  box-shadow: 0 14px 30px rgba(69,82,48,0.12);
+#contact a {
+    color: var(--primary);
 }
 
-.card-icon {
-  display: block;
-  font-size: 30px;
-  color: var(--olive);
-  margin-bottom: 15px;
+
+/* 10. RESUME SECTION */
+
+#resume {
+    background-color: var(--secondary);
 }
 
-.info-card h3,
-.project-card h3,
-.certificate-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
+.resume-paper {
+    background-color: var(--white);
+    color: #222222;
+    max-width: 750px;
+    margin: 25px auto;
+    padding: 45px;
 }
 
-.info-card p,
-.project-card p,
-.certificate-card p {
-  font-size: 14px;
-  color: #606756;
+.resume-paper h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
-/* ==============================
-   7. SKILLS SECTION
-============================== */
-
-.skill-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 35px;
+.resume-paper h2 {
+    font-size: 19px;
+    margin-top: 22px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #CCCCCC;
 }
 
-.skill-list span {
-  background: var(--sage);
-  color: var(--deep-green);
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: 0.3s;
+.resume-paper p {
+    margin-bottom: 8px;
 }
 
-.skill-list span:hover {
-  background: var(--deep-green);
-  color: white;
+#resume button {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 13px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
 }
 
-/* ==============================
-   8. PROJECTS SECTION
-============================== */
-
-.projects {
-  background: #F3F2E5;
+#resume button:hover {
+    background-color: #394A30;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 40px;
-}
 
-.project-card {
-  text-align: left;
-}
+/* 11. FOOTER */
 
-.project-visual {
-  height: 145px;
-  background: var(--powder-blue);
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--deep-green);
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
-  margin-bottom: 22px;
-}
-
-.project-card span {
-  display: inline-block;
-  margin-top: 15px;
-  color: var(--olive);
-  font-size: 12px;
-  font-weight: 700;
-}
-
-/* ==============================
-   9. CERTIFICATES SECTION
-============================== */
-
-.certificate-card {
-  max-width: 550px;
-  margin: 35px auto 0;
-}
-
-/* ==============================
-   10. CONTACT SECTION
-============================== */
-
-.contact {
-  background: var(--sage);
-}
-
-.contact h2 {
-  color: var(--deep-green);
-}
-
-.contact > p:not(.section-tag) {
-  max-width: 550px;
-  margin: 0 auto 28px;
-}
-
-/* ==============================
-   11. FOOTER
-============================== */
-
-.footer {
-  background: var(--deep-green);
-  color: var(--ivory);
-  text-align: center;
-  padding: 22px;
-  font-size: 13px;
-}
-
-/* ==============================
-   12. TABLET RESPONSIVENESS
-============================== */
-
-@media (max-width: 1000px) {
-  .header {
-    padding: 18px 5%;
-  }
-
-  .nav-links {
-    gap: 12px;
-  }
-
-  .nav-links a {
-    font-size: 11px;
-  }
-
-  .hero {
-    padding: 65px 6%;
-    gap: 30px;
-  }
-
-  .image-background {
-    width: 290px;
-    height: 360px;
-  }
-
-  .section {
-    padding: 70px 6%;
-  }
-}
-
-/* ==============================
-   13. MOBILE RESPONSIVENESS
-============================== */
-
-@media (max-width: 700px) {
-  .navbar {
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    font-size: 21px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .nav-button {
-    padding: 8px 15px;
-    font-size: 12px;
-  }
-
-  .hero {
-    flex-direction: column-reverse;
+footer {
+    background-color: var(--primary);
+    color: var(--white);
     text-align: center;
-    padding: 45px 7% 65px;
-    gap: 35px;
-  }
-
-  .hero-content {
-    width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 43px;
-  }
-
-  .hero h2 {
-    font-size: 17px;
-  }
-
-  .hero-buttons,
-  .social-links {
-    justify-content: center;
-  }
-
-  .section {
-    padding: 65px 7%;
-  }
-
-  .section h2 {
-    font-size: 33px;
-  }
-
-  .about-cards,
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .info-card,
-  .project-card {
-    padding: 26px 22px;
-  }
-
-  .project-visual {
-    height: 160px;
-  }
+    padding: 22px;
 }
 
-/* ==============================
-   14. SMALL PHONE SCREENS
-============================== */
+footer p {
+    color: var(--white);
+}
 
-@media (max-width: 380px) {
-  .hero h1 {
-    font-size: 36px;
-  }
 
-  .primary-button,
-  .secondary-button {
-    padding: 10px 17px;
-    font-size: 12px;
-  }
+/* 12. MOBILE RESPONSIVE DESIGN */
+
+@media screen and (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
     }
 
-/* BOTANICAL DECORATIONS */
+    .navbar a {
+        display: inline-block;
+    }
 
-.hero {
-  position: relative;
-  overflow: hidden;
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    section:not(#home) {
+        padding: 45px 7%;
+    }
+
+    .highlight-card,
+    .skill-card,
+    .strength-card {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .resume-paper {
+        padding: 22px;
+    }
+
 }
 
-.hero::before {
-  content: "❧";
-  position: absolute;
-  left: 3%;
-  top: 12%;
-  font-size: 95px;
-  color: var(--sage);
-  opacity: 0.35;
-  transform: rotate(-35deg);
-  pointer-events: none;
-}
 
-.hero::after {
-  content: "❦";
-  position: absolute;
-  right: 4%;
-  bottom: 8%;
-  font-size: 85px;
-  color: var(--olive);
-  opacity: 0.25;
-  pointer-events: none;
-}
+/* 13. PRINT SETTINGS FOR RESUME */
 
-.info-card {
-  border-top: 4px solid var(--sage);
-}
+@media print {
 
-.project-card {
-  border-bottom: 4px solid var(--sage);
-}
+    body {
+        background-color: white;
+        color: black;
+    }
 
-.section-tag::before {
-  content: "✧ ";
-  color: var(--olive);
-}
+    body * {
+        visibility: hidden;
+    }
 
-@media (max-width: 700px) {
-  .hero::before {
-    font-size: 55px;
-    left: 1%;
-  }
+    #resume,
+    #resume .resume-paper,
+    #resume .resume-paper * {
+        visibility: visible;
+    }
 
-  .hero::after {
-    font-size: 55px;
-  }
+    #resume {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        background-color: white;
+    }
 
-  .hero-image::before {
-    width: 250px;
-    height: 250px;
-  }
+    #resume > h2,
+    #resume > button {
+        display: none;
+    }
 
-  .hero-image::after {
-    font-size: 38px;
-  }
-}
-.hero {
-  justify-content: center;
-}
+    .resume-paper {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 10mm;
+        color: black;
+        background-color: white;
+    }
 
-.hero-content {
-  max-width: 750px;
-  width: 100%;
-  margin: auto;
-}
-.hero::before,
-.hero::after,
-.hero-image::before,
-.hero-image::after,
-.section-tag::before {
-  content: none !important;
-  display: none !important;
+    .resume-paper h1,
+    .resume-paper h2,
+    .resume-paper h3,
+    .resume-paper p {
+        color: black;
+    }
+
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+
 }
