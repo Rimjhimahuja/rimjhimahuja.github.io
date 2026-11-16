@@ -1,4 +1,4 @@
-* {
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,8 +25,8 @@ a {
 /* navbar */
 .header {
   width: 100%;
-  padding: 16px 8%;
-  background-color: #EBEBD8;
+  padding: 14px 5%;
+  background-color: #F8F8F0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -37,19 +37,24 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
   font-weight: 700;
   color: #455230;
+  white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 18px;
   list-style: none;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .nav-links a {
@@ -60,18 +65,6 @@ a {
 
 .nav-links a:hover {
   color: #637545;
-}
-
-.nav-button {
-  background-color: #455230;
-  color: #ffffff;
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-size: 14px;
-}
-
-.nav-button:hover {
-  background-color: #637545;
 }
 
 /* hero section */
@@ -305,8 +298,16 @@ a {
 
 /* mobile view */
 @media (max-width: 768px) {
+  .logo {
+    font-size: 16px;
+  }
+
   .nav-links {
-    display: none;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
   }
 
   .hero h1 {
