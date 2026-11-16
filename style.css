@@ -23,17 +23,17 @@ a {
 }
 
 section {
-  scroll-margin-top: 82px;
+  scroll-margin-top: 85px;
 }
 
 /* navbar */
 .header {
-  padding: 16px 8%;
-  background-color: #343D2C;
+  padding: 15px 8%;
+  background-color: #F8F8F0;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 3px solid #637545;
+  border-bottom: 2px solid #9BA685;
 }
 
 .navbar {
@@ -48,64 +48,52 @@ section {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 22px;
   font-weight: 700;
-  letter-spacing: 0.3px;
-  color: #EBEBD8;
+  color: #343D2C;
+  padding: 4px 12px;
+  background-color: #DCEAF2;
+  border-radius: 6px;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 10px;
   list-style: none;
 }
 
 .nav-links a {
   font-size: 14px;
   font-weight: 600;
-  color: #EBEBD8;
-  padding: 6px 2px;
-  position: relative;
-  transition: color 0.2s ease;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: #DCEAF2;
-  transition: width 0.25s ease;
+  color: #455230;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #DCEAF2;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
+  background-color: #455230;
+  color: #F8F8F0;
 }
 
 /* hero */
 .hero {
   max-width: 1000px;
-  margin: 28px auto 0;
-  padding: 58px 8% 50px;
-  background-color: #F8F8F0;
-  border: 1px solid #d2d4be;
-  border-radius: 12px;
+  margin: 0 auto;
+  padding: 64px 8% 54px;
+  border-bottom: 1px solid #d2d4be;
 }
 
 .hero-content {
-  max-width: 680px;
+  max-width: 700px;
+  padding-left: 22px;
+  border-left: 4px solid #637545;
 }
 
 .hero h1 {
   font-size: 48px;
   line-height: 1.15;
   color: #343D2C;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .hero h1 span {
@@ -114,12 +102,12 @@ section {
 
 .hero h2 {
   font-family: 'DM Sans', sans-serif;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 600;
-  color: #455230;
+  color: #343D2C;
   background-color: #DCEAF2;
   display: inline-block;
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: 6px;
   margin-bottom: 14px;
 }
@@ -140,20 +128,20 @@ section {
 
 .section-tag {
   display: inline-block;
-  background-color: #455230;
-  color: #F8F8F0;
+  color: #455230;
+  background-color: #DCEAF2;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  padding: 3px 10px;
+  padding: 4px 10px;
   border-radius: 4px;
   margin-bottom: 8px;
 }
 
 .section h2 {
   font-size: 32px;
-  color: #455230;
+  color: #343D2C;
   margin-bottom: 14px;
 }
 
@@ -176,14 +164,14 @@ section {
 .about-text-card,
 .education-card {
   padding-top: 14px;
-  border-top: 3px solid #637545;
+  border-top: 3px solid #9BA685;
   text-align: left;
 }
 
 .about-text-card h3,
 .education-card h3 {
   font-size: 20px;
-  color: #343D2C;
+  color: #455230;
   margin-bottom: 6px;
 }
 
@@ -195,7 +183,7 @@ section {
 
 .education-name {
   font-weight: 600;
-  color: #455230;
+  color: #343D2C;
   margin-bottom: 4px;
 }
 
@@ -203,14 +191,14 @@ section {
   display: inline-block;
   margin-top: 10px;
   padding: 4px 12px;
-  background-color: #DCEAF2;
-  color: #343D2C;
+  background-color: #455230;
+  color: #F8F8F0;
   border-radius: 12px;
   font-size: 12px;
   font-weight: 600;
 }
 
-/* clean subtle cards for skills and strengths */
+/* subtle cards for skills and strengths */
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -229,23 +217,23 @@ section {
 .strength-card {
   background-color: #F8F8F0;
   padding: 22px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #d6d8c3;
-  border-left: 4px solid #637545;
+  border-top: 4px solid #637545;
   text-align: left;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .skill-card:hover,
 .strength-card:hover {
   transform: translateY(-2px);
-  background-color: #FFFFFF;
+  border-color: #455230;
 }
 
 .skill-card h3,
 .strength-card h3 {
   font-size: 19px;
-  color: #455230;
+  color: #343D2C;
   margin-bottom: 6px;
 }
 
@@ -258,9 +246,9 @@ section {
 /* contact section */
 .contact {
   max-width: 1000px;
-  margin: 32px auto;
+  margin: 34px auto;
   padding: 48px 8%;
-  background-color: #455230;
+  background-color: #343D2C;
   color: #EBEBD8;
   border-radius: 12px;
   text-align: left;
@@ -271,8 +259,8 @@ section {
 }
 
 .contact .section-tag {
-  background-color: #DCEAF2;
-  color: #343D2C;
+  background-color: #637545;
+  color: #F8F8F0;
 }
 
 .contact p {
@@ -290,7 +278,7 @@ section {
 }
 
 .contact-links a {
-  background-color: #F8F8F0;
+  background-color: #DCEAF2;
   color: #343D2C;
   padding: 10px 18px;
   border-radius: 6px;
@@ -299,7 +287,7 @@ section {
 }
 
 .contact-links a:hover {
-  background-color: #DCEAF2;
+  background-color: #F8F8F0;
 }
 
 /* footer */
@@ -316,22 +304,22 @@ section {
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
 
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px 16px;
+    gap: 6px 10px;
   }
 
   .nav-links a {
     font-size: 13px;
+    padding: 5px 10px;
   }
 
   .hero {
-    margin: 18px 4% 0;
-    padding: 38px 6% 32px;
+    padding: 42px 6% 36px;
   }
 
   .hero h1 {
@@ -355,5 +343,3 @@ section {
     gap: 20px;
   }
 }
-body { background-color: red !important; }
-
