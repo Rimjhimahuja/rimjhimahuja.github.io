@@ -13,6 +13,11 @@ body {
   padding: 74px 20px 0;
 }
 
+::selection {
+  background-color: #637545;
+  color: #F8F8F0;
+}
+
 h1, h2, h3, .logo {
   font-family: 'Playfair Display', Georgia, serif;
   color: #455230;
@@ -216,11 +221,13 @@ section {
   border: 1px solid #d2d4be;
   border-radius: 25px;
   font-weight: 600;
-  transition: border-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .contact-links a:hover {
+  background-color: #637545;
   border-color: #637545;
+  color: #F8F8F0;
 }
 
 /* footer */
